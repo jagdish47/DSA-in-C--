@@ -14,7 +14,7 @@ bool isSorted(int arr[], int size){
     }
 
     else{
-        bool ans = isSorted(arr+1, size-1);
+        bool ans = isSorted(&arr[0 + 1], size-1);
         return ans;
     }
 
