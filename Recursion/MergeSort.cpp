@@ -7,8 +7,8 @@ void merge(int *arr, int s, int e){
     int len1 = mid - s + 1;
     int len2 = e - mid;
 
-    int *first = new int[len1];
-    int *second = new int[len2];
+    int *first = new int[len1]; //empty array
+    int *second = new int[len2]; //empty array
 
     int mainArrayIndex = s;
 
@@ -56,10 +56,13 @@ void mergeSort(int *arr, int s, int e){
 
     int mid = s + (e - s) / 2;
 
+    // sort left part
     mergeSort(arr, s, mid);
 
+    // sort right part
     mergeSort(arr, mid+1, e);
 
+    // merge left and right part
     merge(arr, s, e);
 
 }
@@ -72,6 +75,7 @@ int main(){
     mergeSort(arr, 0, n-1);
 
 
+    // Print the array
     for(int i = 0; i < n; i++){
         cout<<arr[i]<<" ";
     }
