@@ -1,27 +1,24 @@
-// #include<iostream>
-// using namespace std;
+#include<iostream>
+using namespace std;
 
-// void increasingDecresing(int n){
-//     if(n == 0){
-//         return ;
-//     }
+void increasingDecresing(int n){
+    if(n == 0){
+        return ;
+    }
 
-//     cout<<n<<" ";
-//     increasingDecresing(n - 1);
-//     cout<<n<<" ";
-// }
+    cout<<n<<" ";
+    increasingDecresing(n - 1);
+    cout<<n<<" ";
+}
 
-// int main(){
+int main(){
 
-//     int n;
+    int n;
 
-//     cout<<" Number : ";
-//     cin>>n;
+    cout<<" Number : ";
+    cin>>n;
 
-//     increasingDecresing(n);
+    increasingDecresing(n);
 
-//     return 0;
-// }
-
-
-
+    return 0;
+}
