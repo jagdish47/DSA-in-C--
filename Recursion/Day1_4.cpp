@@ -1,4 +1,4 @@
-#include<iostream>
+// #include<iostream>
 // using namespace std;
 
 // void increasingDecresing(int n){
@@ -22,3 +22,6 @@
 
 //     return 0;
 // }
+
+
+
