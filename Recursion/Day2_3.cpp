@@ -1,20 +1,51 @@
 #include<iostream>
 using namespace std;
 
-int findMaximum(int arr[], int size, int index, int &maxi){
+// int findMaximum(int arr[], int size, int index, int &maxi){
 
 
-    if(index == size){
-        return maxi;
+//     if(index == size){
+//         return maxi;
+//     }
+
+//     if(maxi < arr[index]){
+//         maxi = arr[index];
+//     }
+
+//     findMaximum(arr, size, index+1, maxi);
+
+//     // return maxi;  //You can return from here also
+
+// }
+
+
+
+// int getMax(int arr[], int size, int index){
+//     if(size == index){
+//         return INT_MIN;  //Minimum value for a variable of type int 
+//     }
+
+//     int ans = arr[index];
+
+//     int recCall = getMax(arr, size, index+1);
+
+//     return max(ans, recCall);
+
+
+// }
+
+
+
+int anotherApproach(int arr[], int size, int index){
+    if(size == 0){
+        return INT_MIN;
     }
 
-    if(maxi < arr[index]){
-        maxi = arr[index];
-    }
+    int maxi = arr[0];
 
-    findMaximum(arr, size, index+1, maxi);
+    int ans = anotherApproach(arr+1, size-1, index);
 
-    // return maxi;  //You can return from here also
+    return ans = max(maxi, ans);
 
 }
 
@@ -25,7 +56,9 @@ int main(){
     int index = 0;
     int maxi = arr[0];
 
-    int ans = findMaximum(arr, size, index, maxi);
+    // int ans = findMaximum(arr, size, index, maxi);
+    // int ans = getMax(arr, size, index);
+    int ans = anotherApproach(arr, size, index);
 
     cout<<ans;
 
