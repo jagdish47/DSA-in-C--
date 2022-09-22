@@ -13,5 +13,9 @@ int main(){
         st.push(arr[i]);
     }
 
-    
+    while(st.empty() == false){
+
+        cout<<st.top()<<" ";
+        st.pop();
+    }
 }
