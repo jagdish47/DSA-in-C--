@@ -9,12 +9,9 @@ void recursionStackPrint(stack<int> st){
 
     int x = st.top();
     st.pop();
-    cout<<x<<endl;
-
-    recursionStackPrint(st);
-
-    cout<<endl<<endl<<endl;
     cout<<x<<" ";
+    //this will print array in reverse order 4, 2, 9, 5, 3
+    recursionStackPrint(st);
 }
 int main(){
 
