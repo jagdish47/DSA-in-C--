@@ -13,7 +13,7 @@ int main()
         st.push(str[i]);
     }
 
-    while (!st.empty())
+        while (!st.empty())
     {
         char ch = st.top();
         st.pop();
