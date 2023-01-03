@@ -3,9 +3,9 @@ using namespace std;
 
 int wayClimb(int n)
 {
-    if (n == 1 || n == 0)
+    if (n == 1 || n == 2)
     {
-        return 1;
+        return n;
     }
 
     return wayClimb(n - 1) + wayClimb(n - 2);
