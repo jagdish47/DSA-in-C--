@@ -4,24 +4,20 @@ using namespace std;
 int main()
 {
 
-    // Print output solution
-    short i = 2300, j = 4322;
-    cout << "i+j" << -(i + j);
+    for (int i = 0; i < 6; i++)
+    {
 
-    // Print output solution
-    // int i = 0;
-    // i = i + 1;
-    // cout << i << endl;
-    // /*print i \*/
-    // i = i + 1;
-    // cout << ++i << endl;
+        for (int j = 0; j < 6 - i - 1; j++)
+        {
+            cout << " ";
+        }
 
-    // Print output solution
-
-    // int a = 10, b, c;
-    // b = a++;
-    // c = a;
-    // cout<<a<<b<<c<<endl;
+        for (int k = 0; k < i + 1; k++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
 
     return 0;
 }
