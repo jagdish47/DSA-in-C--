@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void isAnagram(string a, string b)
+bool isAnagram(string a, string b)
 {
 
     if (a.size() != b.size())
     {
-        // return false;
+        return false;
     }
 
     unordered_map<char, int> umap;
@@ -16,11 +16,32 @@ void isAnagram(string a, string b)
         umap[a[i]]++;
     }
 
-    for (auto x : umap)
+    for (int i = 0; i < b.size(); i++)
     {
 
-        cout << x.first << " " << x.second << endl;
+        char ch = b[i];
+
+        if (umap.find(ch) != umap.end())
+        {
+
+            auto itr = umap.find(ch);
+
+            if (itr->second > 0)
+            {
+                itr->second--;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
     }
+
+    return true;
 }
 
 int main()
@@ -29,7 +50,7 @@ int main()
     string a = "geeksforgeeks";
     string b = "forgeeksgeeks";
 
-    // cout << isAnagram(a, b) << endl;
-    isAnagram(a, b);
+    cout << isAnagram(a, b) << endl;
+    // isAnagram(a, b);
     return 0;
 }
