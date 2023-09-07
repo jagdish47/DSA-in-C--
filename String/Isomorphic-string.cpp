@@ -16,20 +16,22 @@ bool isomorphicString(string s, string t)
             return false;
         }
 
-        map_s[s[i]] = i
-
-            return true;
+        map_s[s[i]] = i + 1;
+        map_t[t[i]] = i + 1;
     }
 
-    int main()
-    {
+    return true;
+}
 
-        string s = "egg";
-        string t = "add";
+int main()
+{
 
-        bool ans = isomorphicString(s, t);
+    string s = "egg";
+    string t = "add";
 
-        cout << "Answer : " << ans << endl;
+    bool ans = isomorphicString(s, t);
 
-        return 0;
-    }
+    cout << "Answer : " << ans << endl;
+
+    return 0;
+}
