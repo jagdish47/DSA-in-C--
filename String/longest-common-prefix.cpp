@@ -42,7 +42,7 @@ string longestCommonPrefix(vector<string> &strs)
     return ans;
 }
 
-int main() R
+int main()
 {
 
     vector<string> strs = {"flower", "flow", "flight"};
