@@ -19,22 +19,26 @@ int main()
     int a, b, c;
     cin >> a >> b >> c;
 
-    if (a > b && a > c)
-    {
+    int x = a, y = b, z = c;
 
-        cout << a;
-    }
+    if (a > b)
+        swap(a, b);
+
     if (b > c)
     {
-        if (b > a)
-        {
-            cout << b;
-        }
+        swap(c, b);
+
+        if (a > b)
+            swap(a, b);
     }
-    else
-    {
-        cout << c;
-    }
+
+    cout << a << endl;
+    cout << b << endl;
+    cout << c << endl;
+    cout << endl;
+    cout << x << endl;
+    cout << y << endl;
+    cout << z << endl;
 
     return 0;
 }
